@@ -1,0 +1,106 @@
+---
+import Section from "../components/Section.astro"
+---
+
+<Section>
+    <article>
+        <figure>
+            <img src="../../public/img/hero-bg.png" width="400px" alt="imagen">
+        </figure>
+        <div class="container-everyone">
+            <div class="container-text">
+                <h1>Save time by building fast with Boldo Template </h1>
+                <p>Funding handshake buyer business-to-business metrics iPad partnership. First mover advantage innovator success deployment non-disclosure.</p>
+            </div>
+            <div class="container-button">
+                <a href="#">Buy Template</a>
+                <a href="#">Explore</a>
+            </div>
+        </div>
+    </article>
+</Section>
+
+<style>
+    article{
+        background-color: var(--color-principal);
+        width: 100%;
+        height: 100vh;
+        color: var(--blanco);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-top: 120px;
+       
+    }
+
+    figure{
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .container-everyone{
+        position: absolute;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .container-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        
+    }
+
+    .container-text h1{
+        font-size: var(--titulos);
+    }
+
+    .container-text p{
+        font-size: var(--texto);
+    }
+
+    .container-button{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .container-button a{
+        text-decoration: none;
+        color: var(--blanco);
+        width: 300px;
+    }
+
+    .container-button a:nth-child(1){
+        background-color: #65e4a3;
+        color: var(--negro);
+        font-size: var(--texto);
+        padding: 20px 50px;
+        border-radius: 40px;
+        text-align: center;
+    }
+
+    .container-button a:nth-child(2){
+        background-color: var(--color-principal);
+        color: var(--blanco);
+        font-size: var(--texto);
+        padding: 20px 50px;
+        border-radius: 40px;
+        border: 2px solid var(--blanco);
+        text-align: center;
+    }
+
+
+
+</style>
