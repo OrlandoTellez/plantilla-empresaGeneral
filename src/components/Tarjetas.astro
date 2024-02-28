@@ -1,0 +1,63 @@
+---
+interface Props{
+    src: string,
+    title: string,
+    description: string,
+    enlace: string
+}
+
+const {src, title, description, enlace} = Astro.props
+
+---
+
+<figure>
+    <img src={src} alt="imagen">
+    <div class="figure-div">
+        <figcaption>{title}</figcaption>
+        <p>{description}</p>
+        <a href={enlace}>Explore page</a>
+    </div>
+</figure>
+
+<style>
+    figure{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+        width: 350px;
+        max-width: 100%;
+    }
+
+    figure img{
+        width: 200px;
+    }
+
+    .figure-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .figure-div figcaption{
+        font-size: 1.6em;
+    }
+
+    .figure-div p{
+        font-size: 1.3em;
+        color: rgb(100, 98, 98);
+    }
+
+    .figure-div a{
+        text-decoration: none;
+        color: var(--color-principal);
+        font-size: 1.4em;
+        cursor: pointer;
+        border-bottom: 2px solid var(--color-principal);
+    }
+    
+</style>

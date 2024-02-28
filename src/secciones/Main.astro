@@ -1,0 +1,69 @@
+---
+import Section from "../components/Section.astro";
+import Tarjetas from "../components/Tarjetas.astro"
+---
+
+<Section>
+    <section>
+        <article class="text-container">
+            <p>Our services</p>
+            <h2>Handshake infographic mass market crowdfunding iteration.</h2>
+        </article>
+        <article class="tarjetas-container">
+            <Tarjetas 
+            src="../../public/img/1.png" 
+            title="Cool feature title" 
+            description="Learning curve network effects return on investment."
+            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+            <Tarjetas 
+            src="../../public/img/2.png" 
+            title="Cool feature title" 
+            description="Learning curve network effects return on investment."
+            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+            <Tarjetas 
+            src="../../public/img/3.png" 
+            title="Cool feature title" 
+            description="Learning curve network effects return on investment."
+            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+        </article>
+
+    </section>
+</Section>
+
+<style>
+    section{
+        background-color: var(--blanco);
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 80px 0px;
+    }
+
+    .tarjetas-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        place-items: center;
+        width: 100%;    
+        gap: 40px;
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+        padding: 0px 40px;
+    }
+
+    .text-container p{
+        font-size: 1.5em;
+    }
+
+    .text-container h2{
+        font-size: 1.4em;
+    }
+</style>
