@@ -60,5 +60,22 @@ const {src, title, description, enlace} = Astro.props
         cursor: pointer;
         border-bottom: 2px solid var(--color-principal);
     }
+
+    @media only screen and (min-width: 1024px){
+        figure{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            width: 350px;
+            max-width: 100%;
+        }
+
+        figure img{
+            width: 300px;
+        }
+    }
     
 </style>

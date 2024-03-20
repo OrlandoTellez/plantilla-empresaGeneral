@@ -5,28 +5,29 @@ import Tarjetas from "../components/Tarjetas.astro"
 
 <Section>
     <section>
-        <article class="text-container">
-            <p>Our services</p>
-            <h2>Handshake infographic mass market crowdfunding iteration.</h2>
-        </article>
-        <article class="tarjetas-container">
-            <Tarjetas 
-            src="/img/1.png" 
-            title="Cool feature title" 
-            description="Learning curve network effects return on investment."
-            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
-            <Tarjetas 
-            src="/img/2.png" 
-            title="Cool feature title" 
-            description="Learning curve network effects return on investment."
-            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
-            <Tarjetas 
-            src="/img/3.png" 
-            title="Cool feature title" 
-            description="Learning curve network effects return on investment."
-            enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
-        </article>
-
+        <div class="container-section">
+            <article class="text-container">
+                <p>Our services</p>
+                <h2>Handshake infographic mass market crowdfunding iteration.</h2>
+            </article>
+            <article class="tarjetas-container">
+                <Tarjetas 
+                src="/img/1.png" 
+                title="Cool feature title" 
+                description="Learning curve network effects return on investment."
+                enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+                <Tarjetas 
+                src="/img/2.png" 
+                title="Cool feature title" 
+                description="Learning curve network effects return on investment."
+                enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+                <Tarjetas 
+                src="/img/3.png" 
+                title="Cool feature title" 
+                description="Learning curve network effects return on investment."
+                enlace="https://www.escuelafrontend.com/data-fetching-con-react"/>
+            </article>
+        </div>
     </section>
 </Section>
 
@@ -34,18 +35,30 @@ import Tarjetas from "../components/Tarjetas.astro"
     section{
         background-color: var(--blanco);
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        padding-bottom: 40px;
+    }
+
+    .container-section{
+        background-color: var(--blanco);
+        width: 100%;
         padding: 20px;
         display: flex;
         flex-direction: column;
         gap: 50px;
         padding: 80px 0px;
+        max-width: 1024px;
     }
 
     .tarjetas-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         place-items: center;
         width: 100%;    
+        max-width: 100%;
         gap: 40px;
     }
 
